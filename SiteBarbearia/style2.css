@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #f0e6c8;
+    font-family: 'Georgia', serif;
+    min-height: 100vh;
+    padding: 2.5rem 1rem 3rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #c9a84c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 1px;
+    background-color: #c9a84c;
+    margin: 0.6rem auto 0;
+    opacity: 0.5;
+}
+
+/* GRID DE CARDS */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    width: 100%;
+}
+
+.cabelo,
+.barba,
+.sobrancelha {
+    background-color: #161616;
+    border: 1px solid #c9a84c33;
+    border-top: 3px solid #c9a84c;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 280px;
+    padding: 1.8rem 1.5rem 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.cabelo:hover,
+.barba:hover,
+.sobrancelha:hover {
+    transform: translateY(-4px);
+    border-color: #c9a84c88;
+}
+
+/* IMAGEM */
+.cabelo img,
+.barba img,
+.sobrancelha img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #c9a84c55;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PREÇO */
+h4 {
+    font-size: 1.6rem;
+    color: #c9a84c;
+    font-weight: normal;
+    margin-bottom: 0.3rem;
+    letter-spacing: 1px;
+}
+
+/* NOME DO SERVIÇO */
+p {
+    font-size: 0.95rem;
+    color: #b0a080;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.4rem;
+}
+
+/* BOTÃO */
+button {
+    background-color: #c9a84c;
+    color: #0a0a0a;
+    border: none;
+    border-radius: 3px;
+    padding: 0.7rem 1.8rem;
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.25s, transform 0.15s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #e0bf6a;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+@media (min-width: 700px) {
+    body {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        flex-basis: 100%;
+    }
+
+    .cabelo,
+    .barba,
+    .sobrancelha {
+        margin-bottom: 0;
+    }
+}
